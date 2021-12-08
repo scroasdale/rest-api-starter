@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REST API</title>
+  <!-- bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+
+    <h1>Front-end for REST API</h1>
+
+    <div class="row">
+
+      <div class="col sm-6">
+        <h2>Read Products</h2>
+        <ul id="readAllProducts">
+        </ul>
+      </div>
+
+      <div class="col sm-6">
+
+        <form class="mb-3">
+          <h2>Create Product</h2>
+          <div class="mb-3 row">
+            <label for="createProductNameInput" class="col-sm-4 col-form-label">Product Name</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="createProductNameInput" placeholder="enter product name" />
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="createProductDescriptionInput" class="col-sm-4 col-form-label">Product Description</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="createProductDescriptionInput" placeholder="enter product description" />
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="createProductPriceInput" class="col-sm-4 col-form-label">Product Price</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="createProductPriceInput"  min="0" value="0.00"/>
+            </div>
+          </div>
+          <button id="createProductSubmitButton" type="button" class="btn btn-primary">POST</button>
+        </form>
+
+        <!-- <form class="mb-3">
+          <h2>Read Product</h2>
+          <div class="mb-3 row">
+            <label for="readProductIdInput" class="col-sm-4 col-form-label">Product Id</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="readProductIdInput" placeholder="enter product id" />
+            </div>
+          </div>
+          <button id="readProductSubmitButton" type="button" class="btn btn-success">GET</button>
+        </form> -->
+
+        <form class="mb-3">
+          <h2>Update Product</h2>
+            <div class="mb-3 row">
+              <label for="updateProductIdInput" class="col-sm-4 col-form-label">Product Id</label>
+              <div class="col-sm-8">
+                <input type="text" class="form-control" id="updateProductIdInput" placeholder="enter product id" />
+              </div>
+            </div>
+            <div class="mb-3 row">
+            <label for="updateProductNameInput" class="col-sm-4 col-form-label">Product Name</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="updateProductNameInput" placeholder="enter product name" />
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="updateProductDescriptionInput" class="col-sm-4 col-form-label">Product Description</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="updateProductDescriptionInput" placeholder="enter product description" />
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="updateProductPriceInput" class="col-sm-4 col-form-label">Product Price</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="updateProductPriceInput"  min="0" value="0.00"/>
+            </div>
+          </div>
+          <button id="updateProductSubmitButton" type="button" class="btn btn-warning">PUT</button>
+        </form>
+
+        <form class="mb-3">
+          <h2>Delete Product</h2>
+          <div class="mb-3 row">
+            <label for="deleteProductIdInput" class="col-sm-4 col-form-label">Product Id</label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" id="deleteProductIdInput" placeholder="enter product id" />
+            </div>
+          </div>
+          <button id="deleteProductSubmitButton" type="button" class="btn btn-danger">DELETE</button>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- axios JS -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <!-- logic -->
+  <script type="module" src="./js/script.js"></script>
+</body>
+</html>
