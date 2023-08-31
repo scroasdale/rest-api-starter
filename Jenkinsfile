@@ -1,6 +1,6 @@
 pipeline{
 environment {
-registry = "username/restapp"
+registry = "scroasdale/restapp"
         registryCredentials = "dockerhub_id"
         dockerImage = ""
     }
@@ -14,8 +14,6 @@ registry = "username/restapp"
                 }
             }
 
- 
-
             stage ("Push to Docker Hub"){
                 steps {
                     script {
@@ -28,4 +26,3 @@ registry = "username/restapp"
             }
             }
         }
-}
